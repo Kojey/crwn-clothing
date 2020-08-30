@@ -4,10 +4,12 @@ import './custom-button.styles.scss'
 
 interface CustomButtonProps{
   value: string
-  type: "button" | "submit" | "reset" | undefined
+  isGoogleSignIn?: boolean
+  type?: "button" | "submit" | "reset" | undefined
+  onClick?: () => void
 }
 const CustomButton = (props: CustomButtonProps) => (
-<button className='custom-button' type={props.type}>{props.value}</button>
+  <button className={`${props.isGoogleSignIn? 'google-sign-in' : ''} custom-button`} type={props.type} onClick={props.onClick}>{props.value}</button>
 )
 
 export default CustomButton;
