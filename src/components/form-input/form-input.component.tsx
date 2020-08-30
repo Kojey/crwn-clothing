@@ -12,7 +12,7 @@ interface FormInputProps{
 }
 const FormInput = (props: FormInputProps) => (
   <div className='group'>
-    <input className='form-input' type={props.type} name={props.name}
+    <input className='form-input' type={props.type} name={props.name} value={props.value}
             onChange={event => props.onChange(event.target.value)}/>
     {props.label?
       <label className={`${props.value.length? 'shrink': ''} form-input-label`}>
