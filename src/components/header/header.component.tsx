@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+//@ts-ignore
 import {Link} from 'react-router-dom';
+//@ts-ignore
 import {connect} from 'react-redux';
 
 import {ReactComponent as Logo} from '../../assets/crown.svg'
@@ -9,7 +11,11 @@ import CartDropDown from '../cart-dropdown/cart-dropdown.component'
 
 import './header.styles.scss'
 
-const Header = (props) => {
+interface HeaderProps{
+  hidden: boolean
+  currentUser: any
+}
+const Header = (props: HeaderProps) => {
   return(
   <div className='header'>
     <Link className='logo-container' to='/'>
@@ -35,7 +41,7 @@ const Header = (props) => {
   </div>
 )};
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state: any) => ({
   currentUser: state.user.currentUser,
   hidden: state.cart.hidden
 })

@@ -13,7 +13,7 @@ export default function Signup(){
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
 
-  async function handleSubmit(event) {
+  async function handleSubmit(event: React.FormEvent) {
     event.preventDefault()
     if(password !== confirmPassword){
       alert("Password don't match");
@@ -42,7 +42,7 @@ export default function Signup(){
         <FormInput name='password' type='password' label='Password' value={password} onChange={setPassword}/>
         <FormInput name='comfirm password' type='password' label='Confirm Password' value={confirmPassword} onChange={setConfirmPassword}/>
         <div className='buttons'>
-          <CustomButton value='Sign Up' onClick={handleSubmit}/>
+          <CustomButton value='Sign Up' type='submit'/>
         </div>
       </form>
     </div>

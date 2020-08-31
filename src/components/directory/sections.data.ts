@@ -1,6 +1,6 @@
-/* Used as starting data for Directory */
+import {ISection} from '../../api/section.interface'
 
-const SECTIONS_DATA = [
+const SECTIONS_DATA: ISection[] = [
     {
         title: 'hats',
         // imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
