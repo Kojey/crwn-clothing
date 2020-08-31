@@ -1,5 +1,7 @@
 import React from 'react';
 
+import CustomButton from '../custom-button/custom-button.component'
+
 import './collection-item.styles.scss'
 
 interface CollectionItemProps {
@@ -18,6 +20,7 @@ const CollectionItem = (props: CollectionItemProps) => (
       <span className='name'>{props.name}</span>
       <span className='price'>{props.price}</span>
     </div>
+    <CustomButton inverted style={{width: '50%'}} value='Add to Cart'/>
   </div>
 )
 

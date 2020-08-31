@@ -7,7 +7,7 @@ import './cart-dropdown.styles.scss'
 const CartDropDown = () => (
   <div className='cart-dropdown'>
     <div className='cart-items'/>
-    <CustomButton style={{width: '100%'}} type='button' value='Go To Checkout'/>
+    <CustomButton type='button' value='Go To Checkout'/>
   </div>
 )
 
