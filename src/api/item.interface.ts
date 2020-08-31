@@ -3,6 +3,7 @@ export interface IItem {
   name: string
   imageUrl: string
   price: number
+  quantity?: number
 }
 
 export interface ICollectionItemProps {
