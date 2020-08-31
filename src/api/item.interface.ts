@@ -8,7 +8,7 @@ export interface IItem {
 
 export interface ICollectionItemProps {
   item: IItem
-  addItem?: (item: any) => any
+  addItem?: (item: IItem) => any
 }
 
 export interface ICollectionPreviewProps {

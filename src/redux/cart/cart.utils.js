@@ -9,3 +9,14 @@ export const addItemToCart = (cartItems, cardItemToAdd) => {
   } 
   return [...cartItems, {...cardItemToAdd, quantity: 1}]
 }
+
+// export const clearItemFromCart = (cartItems, cardItemToClear) => (
+//   cartItems.filter(cartItem => cartItem.id !== cardItemToClear.id)
+// )
+
+// export const removeItemFromCart = (cartItems, cardItemToRemove) => (
+//   cartItems.map(cartItem => 
+//     cartItem.id == cardItemToRemove.id
+//     ? {...cartItem, quantity: cartItem.quantity-1}
+//     : {...cartItem})
+// )

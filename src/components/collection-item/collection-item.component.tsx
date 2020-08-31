@@ -1,5 +1,4 @@
 import React from 'react';
-
 // @ts-ignore
 import  {connect} from 'react-redux'
 
@@ -20,7 +19,7 @@ const CollectionItem = (props: ICollectionItemProps) => (
       <span className='price'>{props.item.price}</span>
     </div>
     <CustomButton inverted value='Add to Cart'
-      onClick={()=>{props.addItem?.(props.item)}}/>
+      onClick={()=>props.addItem?.(props.item)}/>
   </div>
 )
 
