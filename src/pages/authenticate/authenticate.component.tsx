@@ -4,12 +4,12 @@ import Signup from '../../components/sign-up/sign-up.component'
 
 import './authenticate.styles.scss'
 
-const Authenticate = () => (
+const AuthenticatePage = () => (
   <div className='authenticate'>
     <SignIn/>
     <Signup/>
   </div>
 )
 
-export default Authenticate;
+export default AuthenticatePage;
 
