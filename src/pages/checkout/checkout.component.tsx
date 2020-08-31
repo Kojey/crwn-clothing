@@ -7,6 +7,7 @@ import {selectCartItems, selectCartTotal} from '../../redux/cart/cart.selectors'
 
 import './checkout.styles.scss'
 import { IItem } from '../../api/item.interface'
+import CheckoutItem from '../../components/checkout-item/checkout-item.component'
 
 interface CheckoutPageProps {
   cartItems: IItem[]
@@ -17,15 +18,14 @@ const CheckoutPage = (props: CheckoutPageProps) => (
     <div className='checkout-header'>
       { ['Product', 'Description', 'Quantity', 'Price', 'Remove']
         .map(item => (
-          <div className='header-block'>
+          <div className='header-block' key={item}>
             <span>{item}</span>
           </div>
         ))
       }
     </div>
     {
-      props.cartItems?.map(cartItem =>
-        cartItem.name)
+      props.cartItems?.map(cartItem => <CheckoutItem key={cartItem.id} {...cartItem}/>)
     }
     <div className='total'>
     <span>TOTAL: ${props.cartTotal}</span>
