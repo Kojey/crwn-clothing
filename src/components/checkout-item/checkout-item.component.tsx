@@ -2,7 +2,7 @@ import React from 'react'
 // @ts-ignore
 import  {connect} from 'react-redux'
 
-import { IItem } from '../../api/item.interface'
+import { IItem } from '../../api/interface'
 import { addItem, removeItem, clearItem } from '../../redux/cart/cart.actions'
 
 import './checkout-item.styles.scss'

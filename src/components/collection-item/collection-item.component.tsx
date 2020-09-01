@@ -3,10 +3,15 @@ import React from 'react';
 import  {connect} from 'react-redux'
 
 import {addItem} from '../../redux/cart/cart.actions'
-import { IItem, ICollectionItemProps } from '../../api/item.interface';
+import { IItem } from '../../api/interface';
 import CustomButton from '../custom-button/custom-button.component'
 
 import './collection-item.styles.scss'
+
+export interface ICollectionItemProps {
+  item: IItem
+  addItem?: (item: IItem) => any
+}
 
 const CollectionItem = (props: ICollectionItemProps) => (
   <div className='collection-item'>

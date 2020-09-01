@@ -2,7 +2,7 @@ import React from 'react';
 //@ts-ignore
 import {withRouter} from 'react-router-dom';
 
-import {ISection} from '../../api/section.interface'
+import {ISection} from '../../api/interface'
 
 import './menu-item.styles.scss';
 

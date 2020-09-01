@@ -1,10 +1,11 @@
 import React from 'react';
 
 import CollectionItem from '../collection-item/collection-item.component'
-import { ICollectionPreviewProps } from '../../api/item.interface'
+import { ICollection } from '../../api/interface'
 import './collection-preview.styles.scss'
 
-const CollectionPreview = (props: ICollectionPreviewProps) => (
+
+const CollectionPreview = (props: ICollection) => (
   <div className='collection-preview'>
     <h1 className='title'>{props.title.toUpperCase()}</h1>
     <div className='preview'>

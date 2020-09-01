@@ -22,7 +22,7 @@ const cartReducer = (state=INITIAL_SATE, action) => {
       return {
         ...state,
         cartItems: state.cartItems.map(cartItem => 
-                      cartItem.id == action.payload.id
+                      cartItem.id === action.payload.id
                       ? {...cartItem, quantity: cartItem.quantity-1}
                       : {...cartItem})
                       .filter(cartItem => cartItem.quantity !== 0)

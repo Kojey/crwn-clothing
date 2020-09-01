@@ -1,4 +1,4 @@
-import {ISection} from '../../api/section.interface'
+import {ISection} from '../api/interface'
 
 const SECTIONS_DATA: ISection[] = [
     {

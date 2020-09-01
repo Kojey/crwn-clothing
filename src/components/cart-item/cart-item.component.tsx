@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {IItem} from '../../api/item.interface'
+import {IItem} from '../../api/interface'
 import './cart-item.styles.scss'
 
 const CartItem = (props: IItem) => (
