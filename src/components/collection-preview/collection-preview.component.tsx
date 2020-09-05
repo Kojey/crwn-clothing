@@ -1,13 +1,20 @@
 import React from 'react';
+//@ts-ignore
+import {withRouter} from 'react-router-dom';
 
 import CollectionItem from '../collection-item/collection-item.component'
 import { ICollection } from '../../api/interface'
 import './collection-preview.styles.scss'
 
-
-const CollectionPreview = (props: ICollection) => (
+interface CollectionPreviewProps extends ICollection{
+  history?: any
+  match?: any
+}
+const CollectionPreview = (props: CollectionPreviewProps) => (
   <div className='collection-preview'>
-    <h1 className='title'>{props.title.toUpperCase()}</h1>
+    <h1 className='title'
+      onClick={() => {console.log(props);props.history.push(`${props.match.url}/${props.linkUrl}`)}}
+      >{props.title.toUpperCase()}</h1>
     <div className='preview'>
       {
         props.items.filter((_, idx) => idx<4)
@@ -17,4 +24,4 @@ const CollectionPreview = (props: ICollection) => (
   </div>
 )
 
-export default CollectionPreview;
+export default withRouter(CollectionPreview);

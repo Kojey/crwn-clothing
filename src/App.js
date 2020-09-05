@@ -13,6 +13,7 @@ import Header from './components/header/header.component';
 import {auth, createUserProfileDocument} from './firebase/firebase.utils';
 import {setCurrentUser} from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selector';
+// import { selectCollectionsAsList } from './redux/shop/shop.selector'
 
 function App(props) {
   useEffect(()=>{
@@ -26,6 +27,9 @@ function App(props) {
           });
         });
       }
+      // once off code to load data to Firebase
+      // addCollectionAndDocuments('collections', 
+      //   props.collectionsArray.map(({title, items})=>({title:title, items:items})))
       props.setCurrentUser(userAuth)
     })
     return () => unsubscribeFromAuth()
@@ -51,7 +55,8 @@ function App(props) {
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
+  // collectionsArray: selectCollectionsAsList
 })
 const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
